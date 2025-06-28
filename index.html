@@ -1,0 +1,352 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        background-color: black;
+        color: white;
+      }
+
+      h1 {
+        font-family: "Libre Baskerville", serif;
+        text-align: center;
+        margin: 15px 28px;
+        text-transform: uppercase;
+      }
+
+      img {
+        border: 5px solid white;
+        width: 100%;
+      }
+
+      #main-wrapper {
+        margin: 50px 20%;
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <div id="img-wrapper">
+        <img src="./assets/images/bhagavadgita.webp" alt="" />
+      </div>
+      <div id="title-text-wrapper">
+        <h1>Special Words by Shree Krishna</h1>
+      </div>
+      <div id="wise-words-wrapper">
+        <p>
+          Performing one's duty without attachment to results, the importance of
+          self-control and inner peace, and the transformative power of love and
+          devotion.
+        </p>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna's Eternal Wisdom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          #0f0f23 0%,
+          #1a1a2e 50%,
+          #16213e 100%
+        );
+        color: white;
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Animated background particles */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 215, 0, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 165, 0, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(255, 140, 0, 0.05) 0%,
+            transparent 50%
+          );
+        animation: float 20s ease-in-out infinite;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      #main-wrapper {
+        width: 60%;
+        margin: 0 auto;
+        padding: 60px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* Decorative border */
+      #main-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: -20px;
+        right: -20px;
+        bottom: 40px;
+        border: 2px solid rgba(255, 215, 0, 0.3);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        z-index: -1;
+      }
+
+      #img-wrapper {
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      img {
+        border: 5px solid #ffd700;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+          0 0 30px rgba(255, 215, 0, 0.2),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+          0 0 40px rgba(255, 215, 0, 0.3),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+
+      h1 {
+        font-family: "Libre Baskerville", serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 30px 0;
+        background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 3s ease-in-out infinite;
+        text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        letter-spacing: 2px;
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .quote-section {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .sanskrit-quote {
+        font-family: "Libre Baskerville", serif;
+        font-size: 1.3rem;
+        text-align: center;
+        color: #ffd700;
+        font-style: italic;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .english-translation {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin-bottom: 20px;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+
+      .meaning-section {
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 15px;
+        padding: 25px;
+        margin-top: 20px;
+        border-left: 4px solid #ffd700;
+      }
+
+      .meaning-title {
+        font-family: "Libre Baskerville", serif;
+        font-size: 1.2rem;
+        color: #ffd700;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .meaning-text {
+        text-align: justify;
+        font-size: 1rem;
+        color: #f0f0f0;
+        line-height: 1.8;
+        font-weight: 400;
+      }
+
+      .verse-reference {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #ffd700;
+        margin-top: 15px;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        #main-wrapper {
+          width: 90%;
+          padding: 40px 0;
+        }
+
+        h1 {
+          font-size: 2rem;
+          letter-spacing: 1px;
+        }
+
+        .sanskrit-quote {
+          font-size: 1.1rem;
+        }
+
+        .quote-section {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #main-wrapper {
+          width: 95%;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        .sanskrit-quote {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <div id="img-wrapper">
+        <img src="assets/images/bhagavadgita.webp" />
+      </div>
+
+      <div id="title-text-wrapper">
+        <h1>Eternal Wisdom of Shree Krishna</h1>
+      </div>
+
+      <div class="quote-section">
+        <div class="sanskrit-quote">
+          "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br />
+          मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥"
+        </div>
+
+        <div class="english-translation">
+          "You have a right to perform your prescribed duty, but not to the
+          fruits of action.<br />
+          Never consider yourself the cause of the results of your
+          activities,<br />
+          and never be attached to not doing your duty."
+        </div>
+
+        <div class="verse-reference">- Bhagavad Gita, Chapter 2, Verse 47</div>
+
+        <div class="meaning-section">
+          <div class="meaning-title">The Profound Meaning</div>
+          <div class="meaning-text">
+            This timeless verse teaches us the essence of Karma Yoga - the path
+            of selfless action. Krishna reminds us that our dharma (righteous
+            duty) is to act with complete dedication and sincerity, but we must
+            release our attachment to the outcomes. When we perform our duties
+            without expecting specific results, we free ourselves from anxiety,
+            disappointment, and ego. This doesn't mean being careless or
+            indifferent, but rather giving our best effort while surrendering
+            the results to the divine will. This principle transforms work into
+            worship, stress into serenity, and ordinary actions into spiritual
+            practice. It's the secret to finding peace and purpose in our daily
+            lives, no matter what challenges we face.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
